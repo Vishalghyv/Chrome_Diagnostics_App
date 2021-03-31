@@ -1,0 +1,32 @@
+{
+  "name": "Chrome Diagnostics App",
+  "description": "Simple Diagnostics App",
+  "theme_color": "#3498db",
+  "background_color": "#2980b9",
+  "display": "standalone",
+  "start_url": "/",
+  "short_name": "Diagnostics",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": [
+  
+    {
+      "src": "/icons/system-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/icons/system-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/icons/system-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+    
+  ]
+}
