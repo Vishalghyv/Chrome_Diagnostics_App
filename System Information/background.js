@@ -1,4 +1,4 @@
-let previousInfo = 0;
+// Connection with PWA
 
 chrome.runtime.onConnect.addListener ( function(port) {
   if (port.name == "systemInformation") {
@@ -55,6 +55,7 @@ chrome.runtime.onConnect.addListener ( function(port) {
   }
 })
 
+let previousInfo = 0;
 
 // Return CPU utilization processor wise
 function getCpuUtilization(cpuInfo) {

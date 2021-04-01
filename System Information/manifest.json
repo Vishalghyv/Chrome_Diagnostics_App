@@ -1,14 +1,13 @@
 {
   "name": "System Information",
   "version": "1.0",
-  "description": "Extension to get System Information ",
+  "description": "Extension to fetch System Information ",
   "permissions": [
     "system.cpu",
     "system.memory",
     "system.storage",
     "system.display",
     "activeTab",
-    "declarativeContent",
     "storage",
     "<all_urls>",
     "tabs"
