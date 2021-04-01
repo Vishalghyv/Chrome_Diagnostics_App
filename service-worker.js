@@ -22,7 +22,7 @@ const PRECACHE_URLS = [
   "/index.html",
   "/js/app.js",
   "/css/styles.css",
-  "/icons",
+  "/img",
   "/pages/diagnostics-manager.html",
   "/pages/system-state.html",
 ];

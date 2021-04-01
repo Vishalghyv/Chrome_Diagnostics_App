@@ -13,17 +13,17 @@
   "icons": [
   
     {
-      "src": "/icons/system-128.png",
+      "src": "/img/system-128.png",
       "type": "image/png",
       "sizes": "128x128"
     },
     {
-      "src": "/icons/system-256.png",
+      "src": "/img/system-256.png",
       "type": "image/png",
       "sizes": "256x256"
     },
     {
-      "src": "/icons/system-512.png",
+      "src": "/img/system-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
