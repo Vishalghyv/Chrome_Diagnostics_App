@@ -14,10 +14,10 @@ This is a Sample Diagnostics App using Chrome system info api, and representing 
 Live website can be viewed here: [Chrome Diagnostics App](https://chrome-diagnostics-app.web.app/)<br>
 
 To Install Extension:<br>
-* clone the repository using <br>
+* clone the repository using `git clone https://github.com/Vishalghyv/Chrome_Diagnostics_App `<br>
 * go to chrome://extension<br>
 * Activate developer mode<br>
-* Using Load Unpacked load the Extension folder from repository<br>
+* Using Load Unpacked load the System Information folder from repository<br>
 
 Visit the site: [Chrome Diagnostics App](https://chrome-diagnostics-app.web.app/) to view the data<br>
 
