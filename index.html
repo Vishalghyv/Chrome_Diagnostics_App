@@ -11,7 +11,7 @@
   <body>
     <!-- Header -->
     <div class="topnav" id="myTopnav">
-      <a href="#" class="active">Chrome Diagnostics App</a>
+      <a href="/pages/system-data.html" class="active">Chrome Diagnostics App</a>
       <a href="/pages/system-state.html" class="pages">System State</a>
       <a href="/pages/system-diagnostics-manager.html" class="pages">System Diagnostics Manager</a>
       <a href="/" class="pages">System Data</a>      
@@ -40,6 +40,7 @@
         
       </div>
     </div>
+    <br />
 
     <!-- Static Information -->
     <div class="container-data">
@@ -55,14 +56,14 @@
           <p id="storageInfo"></p>
         </div>
       </div>
-      <div class="display card">
-        <div class="card-container">
-          <h2>Display Details: </h2>
-          <p id="displayInfo"></p>
-        </div>
-      </div>
     </div>
 
-    <script type="text/javascript" src="/js/script.js"></script>
+
+    <script src="js/moment.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/chartjs-streaming.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="js/content.js"></script>
+    
   </body>
 </html>

@@ -39,7 +39,7 @@
   }
 
 
-  // Default configuration
+  // Line Chart configuration
   function lineConfig(title) {
       return {
         type: "line",
@@ -111,12 +111,13 @@
         },
       };
     }
-
+  
+  const editorExtensionId = "bmmafoiimnhodnheabiffdmpjjgnfnnh";
 
 // Connecting, Fetching data from chrome extension and Adding it to PWA
 
   // Connection with Chrome Extension.
-  let port = chrome.runtime.connect({name: "systemInformation"})
+  let port = chrome.runtime.connect(editorExtensionId)
 
   // Using port message for bi-directional connection.
   port.postMessage({detail: "cpu"})
@@ -154,21 +155,8 @@
                   }
               storageInfo.innerHTML = txt;
               });
-              port.postMessage({ detail: "display"});
+              port.postMessage({ detail: "usage", timer: 2000});
           }
-
-          if (msg.display) {
-            let txt = "";
-            msg.display.forEach((display) => {
-                txt += `
-                <p> Scren Resolution: ${display.bounds.height} x ${display.bounds.width} </p>
-                <p> Screen Name: ${display.name}  </p>
-                `;
-                displayInfo.innerHTML = txt;
-            });
-            displayInfo.innerHTML = txt;
-            port.postMessage({ detail: "usage", timer: 2000});
-        }
           // Updating Memory and CPU usage in charts.
           if (msg.usage) {
               // update cpu usage
@@ -195,10 +183,6 @@
               memChart.update({
                 preservation: false,
                 });
-
-              
-                
           }
       }
-
   )

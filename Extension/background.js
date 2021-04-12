@@ -1,7 +1,8 @@
 // Connection with PWA
 
-chrome.runtime.onConnect.addListener ( function(port) {
-  if (port.name == "systemInformation") {
+chrome.runtime.onConnectExternal.addListener ( function(port) {
+  // port.postMessage({ msg: "just test from our background" });
+  // if (port.name == "systemInformation") {
       port.onMessage.addListener(function (message) {
           // Return CPU information
           if (message.detail == "cpu") {
@@ -13,12 +14,6 @@ chrome.runtime.onConnect.addListener ( function(port) {
           if (message.detail == "storage") {
               chrome.system.storage.getInfo(function (info) {
                   port.postMessage({storage: info})
-                });
-          }
-          // Return Display information
-          if (message.detail == "display") {
-              chrome.system.display.getInfo(function (info) {
-                  port.postMessage({display: info})
                 });
           }
           // Return CPU and Memory usage information
@@ -52,7 +47,7 @@ chrome.runtime.onConnect.addListener ( function(port) {
                 });
           }
       })
-  }
+  // }
 })
 
 let previousInfo = 0;
