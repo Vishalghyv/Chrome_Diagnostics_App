@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "/",
+    "public": "PWA",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -9,7 +9,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "/pages/system-data.html"
       }
     ]
   }

@@ -10,7 +10,7 @@ function navigator() {
 
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker
-      .register("/service-worker.js")
+      .register("../service-worker.js")
       .then(reg => console.log(" registerd", reg))
       .catch(err => console.log("not registerd", err));
   }

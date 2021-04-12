@@ -5,14 +5,22 @@
   "permissions": [
     "system.cpu",
     "system.memory",
-    "system.storage",
-    "system.display",
-    "activeTab",
-    "storage",
-    "tabs"
+    "system.storage"
   ],
   "background": {
     "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "32": "/img/system-32.png",
+      "48": "/img/system-48.png",
+      "128": "/img/system-128.png"
+    }
+  },
+  "icons": {
+    "32": "/img/system-32.png",
+    "48": "/img/system-48.png",
+    "128": "/img/system-128.png"
   },
   "manifest_version": 3,
   "externally_connectable": {

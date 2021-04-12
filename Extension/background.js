@@ -1,23 +1,24 @@
 // Connection with PWA
 
 chrome.runtime.onConnectExternal.addListener ( function(port) {
-  // port.postMessage({ msg: "just test from our background" });
-  // if (port.name == "systemInformation") {
+  if (port.name == "systemInformation") {
       port.onMessage.addListener(function (message) {
+        switch(message.detail) {
           // Return CPU information
-          if (message.detail == "cpu") {
+          case "cpu":
               chrome.system.cpu.getInfo(function (info) {
                   port.postMessage({cpu: info})
                 });
-          }
+              break
+          case "storage":
           // Return Storage information
-          if (message.detail == "storage") {
               chrome.system.storage.getInfo(function (info) {
                   port.postMessage({storage: info})
                 });
-          }
+              break
+
           // Return CPU and Memory usage information
-          if (message.detail == "usage" && message.timer) {
+          case "usage":
               let usage = {}
               function sendUsage() { 
                   // send cpu and memory 
@@ -25,14 +26,7 @@ chrome.runtime.onConnectExternal.addListener ( function(port) {
                       usage.cpuUsage = getCpuUtilization(info);
                     });
                   chrome.system.memory.getInfo((info) => {
-                      // Convert bytes to GB
-                      let marker = 1.074e9;
-                      let leftMem = info.availableCapacity / marker;
-                      let totalMem = info.capacity / marker;
-                      usage.memUsage = {
-                        used : (totalMem - leftMem).toFixed(2),
-                        total : totalMem.toFixed(2)
-                      };
+                      usage.memUsage = getMemoryUtilization(info)
                     });
                   if (Object.keys(usage).length) {
                       port.postMessage({ usage: usage });
@@ -45,9 +39,10 @@ chrome.runtime.onConnectExternal.addListener ( function(port) {
                   clearInterval(interval);
                   port = null;
                 });
-          }
+              break
+        }
       })
-  // }
+  }
 })
 
 let previousInfo = 0;
@@ -79,4 +74,16 @@ function getCpuUtilization(cpuInfo) {
   });
   previousInfo = cpuInfo;
   return usage
+}
+
+
+function getMemoryUtilization(memInfo) {
+  // Convert bytes to GB
+  let marker = 1.074e9;
+  let leftMem = memInfo.availableCapacity / marker;
+  let totalMem = memInfo.capacity / marker;
+  return {
+    used : (totalMem - leftMem).toFixed(2),
+    total : totalMem.toFixed(2)
+  };
 }
