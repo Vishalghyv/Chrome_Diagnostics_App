@@ -33,7 +33,9 @@ Visit the site: [Chrome Diagnostics App](https://chrome-diagnostics-app.web.app/
 <img src="https://github.com/Vishalghyv/Chrome_Diagnostics_App/blob/master/PWA/img/milestone-2.jpg" height="350" width="700" alt="Milestone 2">
 <br>
 
-* Fetching cpu, storage, memory, display information.
+* Fetching cpu and storage information.
+
+* Calculating memory and cpu utilization.
 
 * Periodically calculating processor utilization percentage.
 
