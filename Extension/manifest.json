@@ -24,6 +24,6 @@
   },
   "manifest_version": 3,
   "externally_connectable": {
-    "matches": ["*://chrome-diagnostics-app.web.app/*", "http://localhost:5000/"]
+    "matches": ["*://chrome-diagnostics-app.web.app/*", "http://localhost:5000/*"]
   }
 }

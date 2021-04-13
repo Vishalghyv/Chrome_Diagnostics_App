@@ -21,11 +21,11 @@ const RUNTIME = 'runtime';
 const PRECACHE_URLS = [
   "/",
   "/pages/system-data.html",
+  "/pages/system-diagnostics-manager.html",
+  "/pages/system-state.html",
   "/js/script.js",
   "/css/styles.css",
   "/img",
-  "/pages/system-diagnostics-manager.html",
-  "/pages/system-state.html",
   "/js/app.js",
   "/js/chart-streaming.min.js",
   "/js/chart.min.js",

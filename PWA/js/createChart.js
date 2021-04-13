@@ -22,7 +22,8 @@
             display: true,
             text: title,
           },
-          responsive: false,
+          responsive: true,
+          maintainAspectRatio: true,
           tooltips: {
             mode: "nearest",
             intersect: false,
@@ -66,7 +67,8 @@
           }]
         },
         options: {
-          responsive: false,
+          responsive: true,
+          maintainAspectRatio: true,
           title: {
             display: true,
             text: title,

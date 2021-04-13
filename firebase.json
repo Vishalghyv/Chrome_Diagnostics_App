@@ -7,10 +7,24 @@
       "**/node_modules/**"
     ],
     "rewrites": [
+      
+      {
+        "source": "/system-data.html",
+        "destination": "/pages/system-data.html"
+      },
+      {
+        "source": "/system-state.html",
+        "destination": "/pages/system-state.html"
+      },
+      {
+        "source": "/system-diagnostics-manager.html",
+        "destination": "/pages/system-diagnostics-manager.html"
+      },
       {
         "source": "**",
         "destination": "/pages/system-data.html"
       }
+
     ]
   }
 }

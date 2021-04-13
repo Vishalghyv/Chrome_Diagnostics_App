@@ -17,12 +17,12 @@ To Install Extension:<br>
 * clone the repository using `git clone https://github.com/Vishalghyv/Chrome_Diagnostics_App `<br>
 * go to chrome://extension<br>
 * Activate developer mode<br>
-* Using Load Unpacked load the System Information folder from repository<br>
+* Using Load Unpacked load the Extension folder from repository<br>
 
 Visit the site: [Chrome Diagnostics App](https://chrome-diagnostics-app.web.app/) to view the data<br>
 
 ## Milestone 1
-<img src="https://github.com/Vishalghyv/Chrome_Diagnostics_App/blob/master/img/milestone-1.png" height="350" width="700" alt="Milestone 1">
+<img src="https://github.com/Vishalghyv/Chrome_Diagnostics_App/blob/master/PWA/img/milestone-1.png" height="350" width="700" alt="Milestone 1">
 <br>
 
 * Creation of three empty pages System Data, System Diagnostics Manager, System State.
@@ -30,15 +30,15 @@ Visit the site: [Chrome Diagnostics App](https://chrome-diagnostics-app.web.app/
 * Creation of manifest.json and service worker to make PWA installable.
 
 ## Milestone 2
-<img src="https://github.com/Vishalghyv/Chrome_Diagnostics_App/blob/master/img/milestone-2.png" height="350" width="700" alt="Milestone 2">
+<img src="https://github.com/Vishalghyv/Chrome_Diagnostics_App/blob/master/PWA/img/milestone-2.png" height="350" width="700" alt="Milestone 2">
 <br>
 
-* Fetching cpu, storage, memory, display information and .
+* Fetching cpu, storage, memory, display information.
 
 * Periodically calculating processor utilization percentage.
 
 ## Milestone 3
-<img src="https://github.com/Vishalghyv/Chrome_Diagnostics_App/blob/master/img/milestone-3.jpg" height="350" width="700" alt="Milestone 3">
+<img src="https://github.com/Vishalghyv/Chrome_Diagnostics_App/blob/master/PWA/img/milestone-3.jpg" height="350" width="700" alt="Milestone 3">
 
 * Connection between PWA and Chrome extension using port connection.
 

@@ -6,41 +6,25 @@ body {
 .container-data {
     display: flex;
     padding:10px;
-    margin: 2px;
-    flex-direction:row;
-    justify-content: space-around;
+    margin: 2px auto;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-around; 
 }
 .container__left  {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    flex: 1.7;
+    flex: 1.5;
+    margin-left: 10px;
+    height: 600px;
+    width: 500px;
 }
 .container__right  {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
     flex: 1;
+    height: 500px !important;
+    width: 500px;
 }
-.cpuUsage {
-    padding:10px;
-    margin: 2px;
-    /* width: 50%; */
-    flex-grow: 2;
-
-}
-.memoryUsage {
-    padding:10px;
-    margin: 2px;
-}
-
-#cpuChart {
+#memUsage {
     width: 100%;
-    height: 100%;
-}
-
-#memChart {
-    width: 100%;
+    height: 100% !important;
 }
 
 #cpuInfo {
@@ -100,17 +84,66 @@ body {
 .card-container {
     padding: 2px 16px;
 }
+.heading {
+    padding-left: 5%;
+}
+.topnav {
+    padding: 0;
+    padding-left: 2%;
+  }
+
+@media screen and (max-width: 750px) {
+    .container-data {
+        /* background-color: grey; */
+        width: 100%;
+        padding: 0;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+    .container__left{
+        width: 95% !important;
+        height: 400px !important;
+    }
+    .container__right{
+        width: 100% !important;
+        height: 300px !important;
+    }
+    .heading {
+        padding-left: 10px;
+    }
+}
   
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) and (min-width: 750px){
+    
+
+    .container-data {
+        /* background-color: lightblue; */
+        width: 80%;
+        padding: 0;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+    .container__left{
+        width: 80% !important;
+        height: 400px !important;
+    }
+    .container__right{
+        width: 80% !important;
+        height: 300px !important;
+    }
+    .heading {
+        padding-left: 10%;
+    }
+
+    
+}
+@media screen and (max-width: 1250px){
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
       display: block;
       padding: 25px;
     }
-}
-  
-@media screen and (max-width: 1200px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
@@ -129,9 +162,7 @@ body {
     .topnav a.active {
         padding-left: 0;
     }
-    .container-data {
-        padding: 0 10%;
-    }
+    
     .heading {
         padding-left: 10%;
     }
