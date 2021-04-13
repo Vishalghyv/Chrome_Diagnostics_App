@@ -30,7 +30,7 @@ Visit the site: [Chrome Diagnostics App](https://chrome-diagnostics-app.web.app/
 * Creation of manifest.json and service worker to make PWA installable.
 
 ## Milestone 2
-<img src="https://github.com/Vishalghyv/Chrome_Diagnostics_App/blob/master/PWA/img/milestone-2.png" height="350" width="700" alt="Milestone 2">
+<img src="https://github.com/Vishalghyv/Chrome_Diagnostics_App/blob/master/PWA/img/milestone-2.jpg" height="350" width="700" alt="Milestone 2">
 <br>
 
 * Fetching cpu, storage, memory, display information.
@@ -38,7 +38,7 @@ Visit the site: [Chrome Diagnostics App](https://chrome-diagnostics-app.web.app/
 * Periodically calculating processor utilization percentage.
 
 ## Milestone 3
-<img src="https://github.com/Vishalghyv/Chrome_Diagnostics_App/blob/master/PWA/img/milestone-3.jpg" height="350" width="700" alt="Milestone 3">
+<img src="https://github.com/Vishalghyv/Chrome_Diagnostics_App/blob/master/PWA/img/milestone-3.png" height="350" width="700" alt="Milestone 3">
 
 * Connection between PWA and Chrome extension using port connection.
 
